@@ -7,14 +7,44 @@ A brief description of your project, what it is used for.
 
 ## Installing / Getting started
 
-A quick introduction of the minimal setup you need to get a hello world up &
-running.
+After creating the project folder, open the terminal in vs-code with the path of the folder created to install the react app. <br>
+The dot "." indicates that the app will be installed in the current folder.
 
 ```shell
-commands here
+npx create-react-app .
 ```
 
-Here you should say what actually happens when you execute the code above.
+Once this is done, we will install our dependencies that are necessary for development.
+
+```shell
+npm install jest-styled-components axios styled-components
+```
+
+For our tests to work, we need to compile js to jsx with babel, which we will install as a development dependency.
+
+```shell
+npm install --save-dev  @babel/core @babel/preset-env @babel/preset-react
+```
+
+After installation, two files should be created, *.babelrc.json* and *jest.config.js*
+
+*.babelrc.json*
+```shell
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
+}
+```
+
+*.jest.config.js*
+```shell
+module.exports = {
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
+  },
+  testEnvironment: 'jsdom',
+};
+
+```
 
 ## Developing
 
@@ -93,7 +123,7 @@ If the api is external, link to api documentation. If not describe your api incl
 ## Database
 
 Explaining what database (and version) has been used. Provide download links.
-Documents your database design and schemas, relations etc... 
+Documents your database design and schemas, relations etc...
 
 ## Licensing
 
