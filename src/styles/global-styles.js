@@ -11,7 +11,6 @@ export const GlobalStyles = createGlobalStyle`
     body {
         ${({ theme }) => css`
             font-family: ${theme.fontFamily.default};
-            font-size: ${theme.fontSize.default};
         `}
     }
     h1 {

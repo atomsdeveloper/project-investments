@@ -1,24 +1,19 @@
 export const theme = {
-  colors: {
-    // Backgrounds Colors
-    bgColorDark: '#0F2B46',
-    bgColorLight: '#ffff',
-
-    // Texts Colors
-    textColorDark: '#0F2B46',
-    textColorLight: '#ffff',
+  bgColor: {
+    dark: '#0F2B46',
+    light: '#ffff',
   },
-  fontSize: {
-    default: '1.6rem',
-    small: '2.4rem',
-    medium: '3.2rem',
-    big: '4rem',
+  textColor: {
+    dark: '#0F2B46',
+    light: '#ffff',
+    grey: '#ccc',
+  },
+  spacings: {
+    full: '100vw',
+    medium: '50%',
+    xsmall: '7rem',
   },
   fontFamily: {
     default: "'Montserrat', sans-serif",
-  },
-  spacings: {},
-  media: {
-    mobile: '(max-width: 768px)',
   },
 };
