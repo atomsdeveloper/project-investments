@@ -17,7 +17,7 @@ npx create-react-app .
 Once this is done, we will install our dependencies that are necessary for development.
 
 ```shell
-npm install jest-styled-components axios styled-components eslint-plugin-prettier
+npm install jest-styled-components axios styled-components eslint-plugin-prettier react-icons
 ```
 
 For our tests to work, we need to compile js to jsx with babel, which we will install as a development dependency.
