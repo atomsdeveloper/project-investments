@@ -3,10 +3,8 @@ import { createGlobalStyle, css } from 'styled-components';
 export const GlobalStyles = createGlobalStyle`
     * {
         margin: 0;
-        padding: 0
-    }
-    html {
-        font-size: 62.5%;
+        padding: 0;
+        box-sizing: border-box; /* Inclui padding e border no cálculo do height */
     }
     body {
         ${({ theme }) => css`
