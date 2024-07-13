@@ -8,11 +8,12 @@ export const Budget = ({
   value,
   colorIcon = '#ccc',
   colorValue = '#838383',
-  colorName = '#ccc'
+  colorName = '#ccc',
+  pointer = 'default',
 }) => {
   return (
     <Styled.Container>
-      <Styled.ContainerIcon>
+      <Styled.ContainerIcon pointer={pointer}>
         {Icon && <Icon size={20} color={colorIcon} />}
       </Styled.ContainerIcon>
       <Styled.ContainerDesc>
@@ -35,4 +36,5 @@ Budget.propTypes = {
   colorIcon: P.string,
   colorValue: P.string,
   colorName: P.string,
+  pointer: P.string,
 };

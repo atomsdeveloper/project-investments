@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   ${({ theme }) => css`
-    gap: 1.2rem;
+    gap: 0.3rem;
     display: flex;
 
     color: ${theme.textColor.dark};
@@ -10,12 +10,16 @@ export const Container = styled.div`
 `;
 
 export const ContainerIcon = styled.div`
-  ${({ theme }) => css`
+  ${({ theme, pointer }) => css`
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     color: ${theme.textColor.dark};
+
+    :hover {
+      cursor: ${pointer};
+    }
   `}
 `;
 
