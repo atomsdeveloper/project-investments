@@ -11,8 +11,6 @@ export const formatPercentage = (value) => {
   }
 
   const valueString = value.toString();
-  const firstPart = valueString.slice(0, 1);
-  const secondPart = valueString.slice(1);
 
-  return `${firstPart},${secondPart}%`;
+  return `${valueString}%`;
 };
