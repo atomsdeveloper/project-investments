@@ -76,7 +76,7 @@ export const Nav = () => {
           pointer={'pointer'}
         />
         <Styled.MenuButton>
-          <IoMenu size={14} color={theme.textColor.light} />
+          <IoMenu size={17} color={theme.textColor.light} />
         </Styled.MenuButton>
       </Styled.ItemsMenu>
     </Styled.Container>

@@ -48,8 +48,8 @@ export const ItemsMenu = styled.div`
 
 export const MenuButton = styled.div`
   ${({ theme }) => css`
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
 
     display: flex;

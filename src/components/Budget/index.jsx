@@ -7,7 +7,7 @@ export const Budget = ({
   name,
   value,
   sizeName = 'xx-small',
-  sizeValue = 'x-small',
+  sizeValue = 'small',
   colorIcon = '#ccc',
   colorValue = '#838383',
   colorName = '#ccc',
@@ -17,7 +17,7 @@ export const Budget = ({
     <Styled.Container>
       <Styled.ContainerIcon pointer={pointer}>
         {Icon ? (
-          <Icon size={20} color={colorIcon} />
+          <Icon size={25} color={colorIcon} />
         ) : (
           <Styled.Separator color={colorIcon} />
         )}
