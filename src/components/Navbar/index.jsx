@@ -71,6 +71,7 @@ export const Nav = () => {
           colorIcon={'#3CA8D6'}
           colorValue={'#838383'}
           colorName={'#838383'}
+          pointer={'pointer'}
         />
         <Styled.MenuButton>
           <IoMenu size={14} color={theme.textColor.light} />
@@ -79,3 +80,4 @@ export const Nav = () => {
     </Styled.Container>
   );
 };
+

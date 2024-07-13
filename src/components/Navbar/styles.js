@@ -3,10 +3,10 @@ import styled, { css } from 'styled-components';
 export const Container = styled.nav`
   ${({ theme }) => css`
     width: 100vw;
-    height: 10%;
+    height: 60px;
 
-    /* position: fixed; */
-    /* z-index: 999; */
+    position: fixed;
+    top: 0;
 
     display: flex;
 
@@ -56,5 +56,9 @@ export const MenuButton = styled.div`
     justify-content: center;
 
     background-color: #3CA8D6;
+
+    :hover {
+      cursor: pointer;
+    }
   `};
 `;
