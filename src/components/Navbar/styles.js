@@ -7,6 +7,7 @@ export const Container = styled.nav`
 
     position: fixed;
     top: 0;
+    z-index: 999;
 
     display: flex;
 
@@ -46,7 +47,7 @@ export const ItemsMenu = styled.div`
 `;
 
 export const MenuButton = styled.div`
-  ${() => css`
+  ${({ theme }) => css`
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -55,7 +56,7 @@ export const MenuButton = styled.div`
     align-items: center;
     justify-content: center;
 
-    background-color: #3CA8D6;
+    background-color: ${theme.bgColor.blue};
 
     :hover {
       cursor: pointer;

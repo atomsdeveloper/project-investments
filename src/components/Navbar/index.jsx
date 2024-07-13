@@ -1,12 +1,11 @@
 // Components
 import * as Styled from './styles';
-import { Budget } from '../Budget/index';
+import axios from 'axios';
 
 // Theme
 import { theme } from '../../styles/theme';
 
 // Hooks
-import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 // Icons
@@ -18,6 +17,9 @@ import { IoMenu } from 'react-icons/io5';
 
 // Utils
 import { formatPrice, formatPercentage } from '../../utils/format';
+
+// Components
+import { Budget } from '../Budget/index';
 
 export const Nav = () => {
   const [value, setValue] = useState([]);
@@ -38,7 +40,7 @@ export const Nav = () => {
   }, []);
 
   const { snapshotByPortfolio = {} } = value?.data ?? {};
-  const { equity, valueApplied, percentageOverIndexer } = snapshotByPortfolio;
+  const { equity, valueApplied } = snapshotByPortfolio;
 
   return (
     <Styled.Container>
@@ -61,7 +63,7 @@ export const Nav = () => {
         <Budget
           icon={TbCircleArrowUpRightFilled}
           name="Rentabilidade"
-          value={formatPercentage(percentageOverIndexer)}
+          value={formatPercentage(2.05)}
           colorValue={'#838383'}
         />
         <Budget
