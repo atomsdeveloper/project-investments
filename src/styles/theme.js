@@ -1,17 +1,13 @@
 export const theme = {
   bgColor: {
-    dark: '#0F2B46',
+    blue: '#3CA8D6',
     light: '#ffff',
+    grey: '#f1eeee',
   },
   textColor: {
-    dark: '#0F2B46',
     light: '#ffff',
-    grey: '#ccc',
-  },
-  spacings: {
-    full: '100vw',
-    medium: '50%',
-    xsmall: '7rem',
+    grey: '#f1eeee',
+    blue: '#3CA8D6',
   },
   fontFamily: {
     default: "'Montserrat', sans-serif",
