@@ -25,6 +25,10 @@ export const Logo = styled.div`
     justify-content: start;
 
     padding-left: 1rem;
+
+    img {
+      width: 85px;
+    }
   `};
 `;
 
