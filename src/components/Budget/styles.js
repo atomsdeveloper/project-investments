@@ -23,6 +23,14 @@ export const ContainerIcon = styled.div`
   `}
 `;
 
+export const Separator = styled.div`
+  ${({ color }) => css`
+    width: 2px;
+    height: 100%;
+    background-color: ${color};
+  `};
+`;
+
 export const ContainerDesc = styled.div`
   ${({ theme }) => css`
     display: flex;
