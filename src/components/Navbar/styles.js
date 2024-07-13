@@ -11,11 +11,13 @@ export const Container = styled.nav`
     display: flex;
 
     background-color: ${theme.bgColor.light};
+
+    box-shadow: 0px 6px 30px 0px rgba(186, 180, 186, 0.77);
   `};
 `;
 
 export const Logo = styled.div`
-  ${({ theme }) => css`
+  ${() => css`
     width: 25%;
 
     display: flex;
@@ -23,8 +25,6 @@ export const Logo = styled.div`
     justify-content: start;
 
     padding-left: 1rem;
-
-    background-color: ${theme.bgColor.dark};
   `};
 `;
 
@@ -35,10 +35,22 @@ export const ItemsMenu = styled.div`
     display: flex;
     align-items: center;
     justify-content: end;
-    gap: 1rem;
+    gap: 2rem;
 
     padding-right: 1rem;
+  `};
+`;
 
-    background-color: red;
+export const MenuButton = styled.div`
+  ${() => css`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #3CA8D6;
   `};
 `;

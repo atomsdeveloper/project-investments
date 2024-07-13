@@ -2,18 +2,22 @@
 import * as Styled from './styles';
 import { Budget } from '../Budget/index';
 
+// Theme
+import { theme } from '../../styles/theme';
+
 // Hooks
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 // Icons
 import { RiMoneyDollarCircleFill } from 'react-icons/ri';
-// import { TbCircleArrowUpFilled } from 'react-icons/tb';
-// import { TbCircleArrowUpRightFilled } from 'react-icons/tb';
-// import { IoIosArrowDropdownCircle } from 'react-icons/io';
+import { TbCircleArrowUpFilled } from 'react-icons/tb';
+import { TbCircleArrowUpRightFilled } from 'react-icons/tb';
+import { IoIosArrowDropdownCircle } from 'react-icons/io';
+import { IoMenu } from 'react-icons/io5';
 
 // Utils
-import { formatPrice } from '../../utils/format';
+import { formatPrice, formatPercentage } from '../../utils/format';
 
 export const Nav = () => {
   const [value, setValue] = useState([]);
@@ -34,7 +38,7 @@ export const Nav = () => {
   }, []);
 
   const { snapshotByPortfolio = {} } = value?.data ?? {};
-  const { equity } = snapshotByPortfolio;
+  const { equity, valueApplied, percentageOverIndexer } = snapshotByPortfolio;
 
   return (
     <Styled.Container>
@@ -46,18 +50,31 @@ export const Nav = () => {
           icon={RiMoneyDollarCircleFill}
           name="Saldo Bruto"
           value={formatPrice(equity)}
+          colorValue={'#838383'}
         />
         <Budget
-          icon={RiMoneyDollarCircleFill}
+          icon={TbCircleArrowUpFilled}
           name="Valor Aplicado"
-          value={formatPrice(equity)}
+          value={formatPrice(valueApplied)}
+          colorValue={'#838383'}
         />
         <Budget
-          icon={RiMoneyDollarCircleFill}
+          icon={TbCircleArrowUpRightFilled}
           name="Rentabilidade"
-          value={formatPrice(equity)}
+          value={formatPercentage(percentageOverIndexer)}
+          colorValue={'#838383'}
         />
-        <Budget icon={RiMoneyDollarCircleFill} name="Carteira" value="Minha Carteira" />
+        <Budget
+          icon={IoIosArrowDropdownCircle}
+          name="Carteira"
+          value="Minha Carteira"
+          colorIcon={'#3CA8D6'}
+          colorValue={'#838383'}
+          colorName={'#838383'}
+        />
+        <Styled.MenuButton>
+          <IoMenu size={14} color={theme.textColor.light} />
+        </Styled.MenuButton>
       </Styled.ItemsMenu>
     </Styled.Container>
   );
